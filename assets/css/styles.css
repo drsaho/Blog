@@ -1,0 +1,21 @@
+body {
+    background-color: #ffffff; 
+    color: #000000; 
+}
+
+/* Dark Mode S */
+body.dark-mode {
+    background-color: #333333; 
+    color: #ffffff; 
+}
+
+footer{ 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(131, 129, 129);
+    color: white;
+    text-align: center;
+  }
+    
