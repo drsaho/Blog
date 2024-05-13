@@ -3,6 +3,10 @@ body {
     color: #000000; 
 }
 
+header{
+    text-align: center;
+}
+
 /* Dark Mode Styles */
 body.dark-mode {
     background-color: #333333; 
@@ -42,3 +46,16 @@ text-align: center;
     margin-top: 0;
 }
 
+form{
+    display: flex;
+    float: right;
+    margin-top: 15px;
+    padding-right: 11px;
+    
+
+}
+
+button {
+    color: #000000;
+    text-align: center;
+}

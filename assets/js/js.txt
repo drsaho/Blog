@@ -1,0 +1,59 @@
+form
+
+document.getElementById('blogForm').addEventListener('submit', function(event) {
+    // Prevent default form submission
+    event.preventDefault(); 
+    
+    // Process form data 
+    var formData = {
+        username: document.getElementById('username').value,
+        title: document.getElementById('title').value,
+        content: document.getElementById('content').value
+    };
+
+    // Clear form fields
+    document.getElementById('username').value = '';
+    document.getElementById('title').value = '';
+    document.getElementById('content').value = '';
+    
+    // Store form data in local storage
+    localStorage.setItem('blogPost', JSON.stringify(formData));
+
+    // Redirect to the posts page
+    window.location.href = 'blog.html';
+});
+
+
+blog
+document.addEventListener('DOMContentLoaded', function() {
+    // Retrieve from localStorage
+    var storedBlogPosts = localStorage.getItem('blogPosts');
+    
+    // Check for stored data
+    if (storedBlogPosts) {
+        // Parse the stored data
+        var blogPosts = JSON.parse(storedBlogPosts);
+        
+        // Display the blog posts
+        var blogPostsHTML = '';
+        blogPosts.forEach(function(blogPost) {
+            blogPostsHTML += `
+                <div class="post">
+                    <h2>${blogPost.title}</h2>
+                    <p>By: ${blogPost.username}</p>
+                    <p>${blogPost.content}</p>
+                </div>
+            `;
+        });
+        
+        // Blog HTML 
+        var blogPostsContainer = document.getElementById('blogPosts');
+        blogPostsContainer.innerHTML = blogPostsHTML;
+    }
+});
+
+// Toggle button
+function toggleMode() {
+    var body = document.body;
+    body.classList.toggle('dark-mode');
+}

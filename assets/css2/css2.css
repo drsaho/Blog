@@ -1,0 +1,40 @@
+body{
+    background-color: bisque;
+    
+}
+
+.container {
+    display: flex;
+}
+
+#heroImg {
+    flex: 1; /* The image takes up half of the container */
+}
+
+#heroImg img {
+    width: 100%; /* Ensuring the image takes up the full width of its container */
+}
+
+.content {
+    flex: 1; /* The form takes up half of the container */
+    padding: 20px; /* Adding some padding for spacing */
+}
+
+form {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px; /* Adding space between labels */
+}
+
+form input {
+    width: calc(100% - 12px); /* Adjusting input width to fill the form */
+    margin-bottom: 10px; /* Adding space between inputs */
+}
+
+form input[type="submit"] {
+    width: auto;
+}
