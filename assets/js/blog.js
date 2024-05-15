@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Parse the stored data
         var blogPost = JSON.parse(storedBlogPost);
         
-        // display the blog post
+        // display post
         var blogPostHTML = `
             <div class="post">
                 <h2>${blogPost.title}</h2>
